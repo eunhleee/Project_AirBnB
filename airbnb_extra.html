@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="img/headimg.svg" rel="shortcut icon" type="image/x-icon">
+  <title>숙소, 체험, 장소를 모두 한 곳에서 -
+    에어비앤비</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+      margin: 0px;
+    }
+
+    /*header 시작*/
+    .main-navi {
+      display: flex;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    .logo {
+      flex: 10;
+      padding: 10px;
+    }
+
+    header {
+      background-image: url(img/header1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 950px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .item a:hover {
+      border-bottom: 2px solid white;
+    }
+
+    .headerfoot a:hover {
+      text-decoration: underline;
+    }
+
+    .reservation {
+      margin-top: 20px;
+      margin-left: 150px;
+      width: 380px;
+      height: 430px;
+      padding: 10px 32px 32px 32px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      color: #484848;
+      background: white;
+
+    }
+
+    .personnel div {
+      border: 1px solid #EBEBEB;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .reservation input {
+      border-radius: 4px;
+      padding: 15px;
+      border: 1px solid #EBEBEB;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 335px;
+    }
+
+    .checkin {
+      display: grid;
+      grid-template-columns: 160px 100px;
+
+    }
+
+    .checkin input {
+      width: 175px;
+    }
+
+    .reservation button {
+      padding: 12px 25px;
+      margin-top: 20px;
+      background: #ff5a5f;
+      border-radius: 5px;
+      color: white;
+      border: white;
+      font-size: 16px;
+    }
+
+    .colona {
+      padding: 0px 20px;
+      width: 405px;
+      height: 205px;
+      margin-top: 10px;
+      margin-left: 150px;
+      margin-bottom: 20px;
+      background: white;
+      border-radius: 5px;
+      border-top: 10px solid orange;
+    }
+
+    pre {
+      font-size: 14px;
+      font-family: -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+      color: #707070;
+    }
+
+    /*header 끝*/
+
+
+    /*section전체 시작*/
+    section {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 80px;
+      margin-bottom: 100px;
+    }
+
+    section a {
+      font-size: large;
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    section a:hover {
+      border-radius: 4px;
+      background: #f1f1f1;
+      padding: 4px;
+
+    }
+
+    /*section전체 끝*/
+
+    /*section1 시작*/
+    .section1 div {
+      display: flex;
+    }
+
+    .section1 div div {
+      border: 1px solid lightgray;
+      border-radius: 20px;
+      margin-right: 50px;
+      width: 900px;
+      height: 90px;
+      box-shadow: 1px 0.5px 5px 2px lightgray;
+    }
+
+    .section1 p {
+      margin-top: 35px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .section1 img {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    /*section1 끝*/
+    .bg-img {
+
+      background-image: url(img/section2.jpg);
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    /*section2 시작*/
+    .section2 img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      transform: translate(-50%, 1000%);
+    }
+
+    .section2 button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, 2270%);
+      z-index: 2;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 15px;
+      background: white;
+      color: black;
+      border: white;
+    }
+
+    /*section2 끝*/
+
+    /*section3 시작*/
+    .section3 {
+      margin-bottom: 20px;
+    }
+
+    .sec3container {
+      display: grid;
+      /*3등분해서 100px크기로 나타냄*/
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-rows: 500px 500px -500px;
+      /* grid-auto-rows: 100px;*/
+      row-gap: 20px;
+      column-gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .sec3box img {
+      width: 250px;
+      height: 350px;
+      border-radius: 9px;
+    }
+
+    .section3 .place {
+      font-size: small;
+      font-weight: bold;
+    }
+
+    /*section3 끝*/
+    /*section4 시작*/
+    form {
+      font-size: small;
+      display: inline-block;
+    }
+
+    .item {
+      padding: 10px 5px;
+    }
+
+    .container {
+      display: grid;
+      /*3등분해서 100px크기로 나타냄*/
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-rows: 300px 300px;
+      /* grid-auto-rows: 100px;*/
+      height: 100%;
+      row-gap: 20px;
+      column-gap: 20px;
+      margin-bottom: 50px;
+      margin-right: 30px;
+    }
+
+    .box img {
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .plus {
+      text-align: center;
+      border-radius: 3px;
+      font-size: small;
+      margin-right: 10px;
+    }
+
+    .country {
+      color: gray;
+      background: white;
+      flex: 1;
+      font-size: small;
+    }
+
+    .star {
+      float: right;
+      font-size: 15px;
+    }
+
+    .grade {
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .place {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    /*section4 끝*/
+
+    /*section5 시작*/
+    .sec5box img {
+      border-radius: 10px;
+    }
+
+    .sec5p {
+      font-size: small;
+      color: #914669;
+      font-weight: bold;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    .sec5pp {
+      margin-top: 2px;
+      color: #484848;
+      ;
+    }
+
+    .sec5container {
+      position: relative;
+      /*자식 position:absolute를 사용하고 싶을때 지정*/
+      margin-bottom: 100px;
+    }
+
+    .sec5box {
+      margin: 30px;
+    }
+
+    .my-controls .prev {
+      position: absolute;
+      top: 35%;
+      left: 1px;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid lightgray;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      padding: 10px -10px;
+      outline: none;
+
+    }
+
+    .my-controls .next {
+      position: absolute;
+      top: 35%;
+      right: 1px;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid lightgray;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      padding: 10px -10px;
+      outline: none;
+    }
+
+    /*section5 끝*/
+
+    /*footer 시작*/
+    footer {
+      width: 100%;
+
+    }
+
+    footer hr {
+      border: 0.5px solid lightgray;
+    }
+
+    .totalfooter {
+      width: 1260px;
+      margin-left: 300px;
+      margin-bottom: 20px;
+    }
+
+    .totalfooter p {
+      margin-top: 20px;
+    }
+
+    .footercontainer {
+      display: grid;
+      grid-template-columns: 330px 330px 330px 330px 330px;
+      /* grid-auto-rows: 100px;*/
+      height: 300px;
+      row-gap: 20px;
+      column-gap: 30px;
+      border-bottom: 1px solid lightgray;
+      margin-bottom: 0px;
+    }
+
+    .foot a,
+    .totalfooter a {
+      color: #484848;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .foot a {
+      display: table;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .foot a:hover,
+    .totalfooter a:hover {
+      text-decoration: underline;
+    }
+
+    footer p {
+      margin-top: 50px;
+      font-size: small;
+      font-weight: bold;
+    }
+
+    .site a {
+      float: right;
+      display: flex;
+      margin-right: 15px;
+    }
+
+    /*footer 끝*/
+
+    /*로그인 팝업창 시작*/
+    #login {
+      display: none;
+    }
+
+    .modal,.joinmodal {
+      position: fixed;
+      /* 포지션 
+픽스 */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* 가로길이 */
+      height: 100%;
+      /* 세로높이 */
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    /* 텍스트상자 */
+    .modal .text_input {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    /* 버튼 스타일*/
+    .modal button ,.joinmodal button{
+      background-color: red;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+  
+    }
+
+    .modal .container ,.joinmodal .joincontainer{
+      display: table;
+      padding: 10px 16px;
+    }
+
+    /* 배경화면(로그인창 바깥) */
+
+    /* 로그인 팝업창 시작 */
+    .modal-content ,.joinmodal-content{
+      background-color: #fefefe;
+      position: absolute;
+      width: 550px;
+      height: 55%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #888;
+      padding: 20px;
+    }
+
+    .modal hr ,.joinmodal hr{
+      border: 0.5px solid #f1f1f1;
+      margin-bottom: 10px;
+    }
+
+    /* 종료버튼 (x) */
+    .modal #close-button ,.close{
+      float: left;
+      font-size: 10px;
+      color: gray;
+      border: none;
+      background: none;
+      width: 20px;
+      margin-bottom: 0px;
+      padding: 0px;
+
+    }
+
+    .modal a ,.joinmodal a{
+      text-decoration: none;
+      color: lightseagreen;
+      font-weight: 800;
+      font-size: small;
+    }
+
+    .modal div button ,.joinmodal div button {
+      padding: 15px;
+      border: 2px solid gray;
+      border-radius: 4px;
+      align-items: center;
+
+    }
+
+    #facebook,#joinfacebook{
+      width: 18px;
+      margin-top: 50px;
+      margin-left: 0px;
+      background: #4868B2;
+      border-color: #4868B2;
+      font-size: 15px;
+      font-weight: bold;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    #google,#joingoogle{
+      width: 18px;
+      margin-left: 20px;
+      margin-top: 20px;
+      background: white;
+      border: 2px solid gray;
+      border-radius: 4px;
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    #email,#joinemail {
+      background-color: #FF5A5F;
+      border-color: #FF5A5F;
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
+  
+    }
+
+    #or ,#joinor{
+      top: 40%;
+      margin-left: 242px;
+      margin-bottom: 0px;
+      font-size: small;
+    }
+
+    #text ,#jointext {
+      color: darkslategrey;
+    }
+
+    .line,.joinline {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .left ,.joinleft{
+      margin-top: 10px;
+      margin-bottom: -10px;
+      width: 230px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    .right ,.joinright{
+      float: right;
+      margin-top: 10px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      width: 230px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    #emailinput,
+    #passinput {
+      border: 0.5px solid lightgray;
+      width: 480px;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      align-items: center;
+
+    }
+
+    .modal input {
+      border: none;
+      font-size: 14px;
+    }
+
+    #emailinput img,
+    #passinput img {
+      float: right;
+    }
+
+    #password {
+      font-size: small;
+    }
+
+    #checkboxdiv,
+    #hint {
+      margin-bottom:20px;
+    }
+
+    #checkboxdiv input {
+      float: left;
+      margin-left: 10px;
+    }
+
+    #checkboxdiv a {
+      float: right;
+      margin-right: 10px;
+      font-weight: lighter;
+
+    }
+
+    #hint a,#joinrelogin a,
+    #relogin,#relogin a ,#jointext{
+      font-size: 15px;
+      margin-left: 10px;
+    }
+
+    /*로그인 팝업창 끝*/
+
+
+
+#join {
+  box-sizing: border-box;
+  display: none;
+}
+
+.joinmodal-content{
+  height: 35%;
+}
+#joinemail{
+  margin-top: -5px;
+  padding: 7px;
+}
+#joinfacebook{
+  width: 18px;
+      margin-top: 30px;
+      margin-left: 5px;
+      padding: 0px;
+}
+#joingoogle{
+  width: 18px;
+      margin-left: 5px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+}
+
+
+  </style>
+</head>
+
+<body id="body">
+
+  <!--첫페이지 시작-->
+  <header id="main-page" class="main-page">
+
+    <!--네비게이션 메뉴 시작-->
+    <nav class="main-navi" style="padding: 20px 10px;">
+      <div class="logo">
+        <a href="airbanb.html"><img src="img/home.svg" width="40px" alt=""></a>
+      </div>
+      <div class="item">
+        <a href="#"><img src="img/lang.svg" alt="">&nbsp;한국어(KR)</a>
+      </div>
+      <div class="item">
+        <a href="#">￦KRW</a>
+      </div>
+      <div class="item">
+        <a href="#">숙소 호스팅</a>
+      </div>
+      <div class="item">
+        <a href="#">체험 호스팅</a>
+      </div>
+      <div class="item">
+        <a href="#">도움말</a>
+      </div>
+      <div class="item">
+      <a href="#" onclick="openjoin();">회원가입</a>
+      </div>
+      <div class="item">
+        <a href="#" onclick="openlogin();">로그인</a>
+      </div>
+    </nav>
+    <!--네비게이션 메뉴 끝-->
+    <!--숙소 예약 div-->
+    <div class="reservation">
+      <h1><span>특색 있는 숙소와 즐길<br>거리를 예약하세요.
+        </span></h1>
+      <form action="">
+        <div class="arrive">
+          목적지<br>
+          <input type="text" placeholder="모든 위치"><br>
+        </div>
+        <div class="checkin">
+          <div>체크인</div>
+          <div>체크아웃</div>
+          <input type="text" placeholder="년.월.일.">
+          <input type="text" placeholder="년.월.일.">
+        </div>
+        <div class="personnel">
+          인원<br>
+          <div>
+            <input type="text" placeholder="인원" style="border: none;width: 280px;padding: 7px;">
+            <img src="img/button.PNG" alt="" style="float: right; 
+        margin-top: 10px; margin-right: 10px;">
+          </div>
+        </div>
+
+        <button type="submit" style="float: right;">검색</button>
+
+      </form>
+    </div>
+    <!--숙소 예약 div 끝-->
+    <!--코로나 관련 공지 div-->
+    <div class="colona">
+      <pre>
+<span style="color: black;font-weight: bold; font-size: 16px; ">코로나19 사태에 대한 에어비앤비의 대응</span>
+
+에어비앤비는 2020년 3월 14일까지 예약을 마쳤으며 체크인
+날짜가 2020년 4월 14일 이전인 예약건에 대해, 게스트에게는
+예약금 전액 환불을, 호스트에게는 수수료 없는 취소 옵션을
+제공하고 있습니다. 이 정책은 신규 예약에는 적용되지
+않습니다.
+
+<a href="" style="color: black; margin-left: -10px; text-decoration: underline; font-weight: bold;">자세히 알아보기</a></pre>
+
+    </div>
+    <!--코로나 관련 공지 div끝-->
+    <!--오리건의 독특한 장소 링크-->
+    <div class="headerfoot" style="float: right;margin-right: 30px;">
+      <a href="">
+        <p style="text-align: right; font-weight: bold;">오리건에 있는 300개 이상의<br>독특한 숙소
+        </p>
+      </a>
+    </div>
+    <!--오리건의 독특한 장소 링크끝-->
+  </header>
+  <!--header 끝-->
+  <!--첫번째 section 시작-->
+  <section class="section1">
+    <h2>에어비앤비 둘러보기</h2>
+    <div>
+      <div>
+        <img src="img/section1_1.webp" width="120px" alt="">
+        <p>숙소</p>
+      </div>
+      <div><img src="img/section1_2.webp" width="120px" alt="">
+        <p>체험</p>
+      </div>
+      <div><img src="img/section1_3.webp" width="120px" alt="">
+        <p>어드벤처</p>
+      </div>
+    </div>
+  </section>
+  <!--첫번째 section 끝-->
+
+  <!--두번째 section 시작-->
+  <section class="section2">
+    <h2>에어비앤비 플러스 숙소</h2>
+    <p style="margin-bottom: 30px;">퀄리티와 인테리어 디자인이 검증된 숙소.</p>
+
+    <div class="bg-img" style="height: 400px; border-radius: 4px; ">
+      <img src="img/section2.svg" alt=""><button>숙소 둘러보기 > </button></div>
+  </section>
+  <!--두번째 section 끝-->
+
+  <!--세번째 section 시작-->
+  <section class="section3">
+    <h2>에어비앤비 어드벤처를 소개합니다.</h2>
+    <p style="margin-bottom: 30px;">현지 전문가가 진행하는 2일 이상의 여행-액티비티, 식사, 숙박 포함.</p>
+    <div class="sec3container">
+      <div class="sec3box">
+        <img src="img/section3_2.webp"></img>
+        <div class="adventure">
+          <div class="place">TANZANIA, UNITED REPUBLIC OF</div>
+          <div class="price">Chimpanzee Trekking in Gomge <br>
+            1인당 ￦840,190부터 ㆍ3일</div>
+        </div>
+      </div>
+      <div class="sec3box">
+        <img src="img/section3_1.webp"></img>
+        <div class="adventure">
+          <div class="place">RUSSIAN FEDERATION</div>
+          <div class="price">Окунитесь в настоящую сельскую жизнь<br>
+            1인당 ￦99,711부터 ㆍ2일</div>
+        </div>
+      </div>
+      <div class="sec3box">
+        <img src="img/section3_4.webp"></img>
+        <div class="adventure">
+          <div class="place">캐나다</div>
+          <div class="price">
+            <p>브리티시컬럼비아에서 반짝반짝 <br>
+              빛을 내는 바닷속 생물을 만나세요<br>
+              1인당 ￦238,580부터 ㆍ2일<br>
+              <span style="font-size: 14px;">★4.7</span> <span style="color: lightgrey;">(56)</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="sec3box">
+        <img src="img/section3_6.webp"></img>
+        <div class="adventure">
+          <div class="place">마다가스카르</div>
+          <div class="price">Nature Photography in<br>
+            Madagascar <br>
+            1인당 ￦9,448,896부터 ㆍ14일</div>
+        </div>
+      </div>
+      <div class="sec3box">
+        <img src="img/section3_5.webp"></img>
+        <div class="adventure">
+          <div class="place">브라질</div>
+          <div class="price">
+            <p>산 정상에서 즐기는 캠핑!<br>
+              1인당 ￦95,724부터 ㆍ2일<br>
+              <span style="font-size: 14px;">★5.0 </span><span style="color: lightgrey;">(4)</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="sec3box">
+        <img src="img/section3_3.webp"></img>
+        <div class="adventure">
+          <div class="place">인도</div>
+          <div class="price">Food & Faith in Southwestern India <br>
+            1인당 ￦6,753,828부터 ㆍ10일</div>
+        </div>
+      </div>
+      <div>
+        <a href="">어드벤처 모두 보기></a>
+      </div>
+    </div>
+  </section>
+
+  <!--세번째 section 끝-->
+  <!--네번째 section 시작-->
+  <section id="world-home">
+    <h2>전 세계 숙소</h2>
+    <div class="container">
+      <div class="box">
+        <img src="img/hotel1.jpg" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:white;background: indianred;width: 40px;">plus
+          </div>
+          <div class="country">인도네시아</div>
+          <div class="star" style="color:indianred;">&starf;</div>
+          <div class="grade">4.90</div>
+        </div>
+        <div class="name">Dutch Architecture Villa with Private
+          Pool</div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel2.webp" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid black; width:80px;
+       ">슈퍼호스트 </div>
+          <div class="country">포르투갈</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.95</div>
+        </div>
+        <div class="name">Douro Villa with swimming pool, Penafiel, Portugal</div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel3.jpg" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid 
+      black; width:80px;">슈퍼호스트 </div>
+          <div class="country">아이슬란드</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.76</div>
+        </div>
+        <div class="name">A BEAUTIFUL LUXURY VILLA IN NORTH ICELAND
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel4.webp" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid 
+      black; width:80px;">슈퍼호스트 </div>
+          <div class="country">일본</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.94</div>
+        </div>
+        <div class="name">Sanson Terrace "off-grid tiny cottage"
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel5.jpg" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid 
+      black; width:80px;">슈퍼호스트 </div>
+          <div class="country">아이슬란드</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.76</div>
+        </div>
+        <div class="name">
+          Amazing view - Moderne apartment
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel6.webp" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid 
+      black; width:80px;">슈퍼호스트 </div>
+          <div class="country">프랑스</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.90</div>
+        </div>
+        <div class="name">
+          Superb duplex apartment in the historical centre
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel7.webp" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid 
+        black; width:80px;">슈퍼호스트 </div>
+          <div class="country">크로아티아</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.78</div>
+        </div>
+        <div class="name">
+          The best position in Hvar!
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/hotel8.webp" alt="" width="320px" height="200px">
+        <div class="place">
+          <div class="plus" style="color:black; border:1px solid 
+        black; width:80px;">슈퍼호스트 </div>
+          <div class="country">그리스</div>
+          <div class="star" style="color:hotpink">&starf;</div>
+          <div class="grade">4.95</div>
+        </div>
+        <div class="name">
+          Hector Cave House
+        </div>
+      </div>
+    </div>
+    <a href="">보기(2000개이상) ></a>
+  </section>
+  <!--네번째 section 끝-->
+  <!--다섯번째 section 시작-->
+  <section id="section5">
+    <h2 style="margin-bottom: 0px;">에어비앤비 플러스 추천 여행지</h2>
+    <p style="margin-top: 2px; margin-bottom: 30px;">내 집 같은 편안함 그 이상을 선사하는 아름다운 숙소를 찾아보세요.</p>
+    <div class="sec5container">
+      <div class="my-controls" aria-label="Carousel Navigation" tabindex="0">
+        <button class="prev" data-controls="prev" tabindex="-1" aria-controls="controls"><i
+            class="fas fa-chevron-left"></i></button>
+        <button class="next" data-controls="next" tabindex="-1" aria-controls="controls"><i
+            class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="slider">
+        <div class="sec5box">
+          <img src="img/sydneypic.PNG" width="480px" height="300px" alt="">
+          <div class="sec5">
+            <p class="sec5p">790개 이상의 검증된 숙소</p>
+            <p class="sec5pp">바다와 하늘이 아름다운 도시에서 항만의 로프트, 햇살 가득한 스튜디오<br>
+              등 멋지고 다양한 검증된 숙소를 만나보세요.</p>
+          </div>
+        </div>
+        <div class="sec5box">
+          <img src="img/sanfpic.PNG" width="480px" alt="">
+          <div class="sec5">
+            <p class="sec5p">390개 이상의 검증된 숙소</p>
+            <p class="sec5pp">아름다운 해변과 숲으로 둘러싸인 도시에서 <br>
+              예술적으로 꾸며진 검증된 숙소를 만나보세요.</p>
+          </div>
+        </div>
+        <div class="sec5box">
+          <img src="img/townpic.PNG" width="480px" height="290px" alt="">
+          <div class="sec5">
+            <p class="sec5p">200개 이상의 검증된 숙소</p>
+            <p class="sec5pp">건축의 도시 시카고에서 뛰어난 건축미를 갖춘 것은<br>
+              물론, 컬리티와 편안함이 검증된 숙소에<br>
+              머물러보세요.</p>
+          </div>
+        </div>
+        <div class="sec5box">
+          <img src="img/lospic.PNG" width="480px" alt="">
+          <div class="sec5">
+            <p class="sec5p">920개 이상의 검증된 숙소</p>
+            <p class="sec5pp">'천사들의 도시'에서 해변가 방갈로, 20세기 중반 모던 스타일의<br>전원주택 등 검증된 다양한 숙소를 만나보세요.</p>
+          </div>
+        </div>
+        <div class="sec5box">
+          <img src="img/motpic.PNG" width="480px" alt="">
+          <div class="sec5">
+            <p class="sec5p">100개 이상의 검증된 숙소</p>
+            <p class="sec5pp">고풍스러운 매력과 트렌드를 선도하는 요리가 공존하는 도시에서<br>필수 편의시설이 완비된 검증된 숙소를 만나보세요.
+            </p>
+          </div>
+        </div>
+        <div class="sec5box" style="margin-bottom: 20px;">
+          <img src="img/balpic.PNG" width="480px" alt="">
+          <div class="sec5">
+            <p class="sec5p">230개 이상의 검증된 숙소</p>
+            <p class="sec5pp">수없이 다양한 문화가 공존하는 도시에서 고딕스타일의 아파트,<br>
+              넓은 로프트 등 검증된 숙소를 만나보세요.</p>
+          </div>
+        </div>
+      </div>
+      <a href="" style="margin-top: 40px;height: 15px; width:280px;">에어비앤비 플러스 서비스 지역 더보기 > </a>
+    </div>
+  </section>
+  <!--다섯번째 section 끝-->
+
+  <!--footer 시작-->
+  <footer>
+    <hr>
+    <div class="totalfooter">
+      <div class="footercontainer">
+        <div class="foot">
+          <p>소개</p>
+          <a href="">다양성 및 소속감</a>
+          <a href="">접근성</a>
+          <a href="">신뢰와 안전</a>
+          <a href="">Airbnb Citizen</a>
+          <a href="">뉴스룸</a>
+        </div>
+        <div class="foot">
+          <p>커뮤니티</p>
+          <a href="">에어비앤비 매거진</a>
+          <a href="">에어비앤비 비즈니스 프로그램</a>
+          <a href="">친구 초대하기</a>
+          <a href="">채용정보</a>
+        </div>
+        <div class="foot">
+          <p>호스팅하기</p>
+          <a href="">숙소 호스팅</a>
+          <a href="">체험호스팅</a>
+          <a href="">책임감 있는 호스팅</a>
+          <a href="">Open Homes</a>
+          <a href="">올림픽</a>
+          <a href="">자료 센터</a>
+
+        </div>
+        <div class="foot">
+          <p>에어비앤비 지원</p>
+          <a href="">도움말 센터</a>
+          <a href="">에어비앤비 이웃 민원 지원</a>
+        </div>
+      </div>
+      <p style="font-weight: normal; font-size: 15px;">© 2020 Airbnb, Inc. All rights reserved
+        <span>ㆍ<a href="">개인정보 보호정책</a></span>
+        <span>ㆍ<a href="">이용약관</a></span>
+        <span>ㆍ<a href="">사이트맵</a></span>
+        <span>ㆍ<a href="">한국의 변경된 환불 정책</a></span>
+        <span class="site">
+          <a href=""><img src="img/footpost.PNG" width="23px" alt=""></a>
+
+          <a href=""><img src="img/footblog.PNG" width="23px" alt=""></a>
+
+          <a href=""><img src="img/footinst.PNG" width="22px" alt=""></a>
+
+          <a href=""><img src="img/foottwit.PNG" width="23px" alt=""></a>
+
+          <a href="" style="flex: 1;"><img src="img/footface.PNG" width="25px" alt="">
+          </a>
+
+          <a href="">￦&nbsp;
+            <span style="text-decoration: underline; color: black;
+                  font-weight: bold; margin-right: 40px;">KRW</span></a>
+
+          <a href="">
+            <img src="img/lang2.svg" width="15px"></img>&nbsp;<span
+              style="text-decoration: underline; color: black;font-weight: bold;">한국어(KR)</span></a>
+        </span>
+      </p>
+
+
+    </div>
+    </div>
+  </footer>
+  <!--footer 끝-->
+
+  <div class="popup">
+<!-- 로그인 폼 시작 -->
+<div id="join" class="joinmodal">
+
+  <form class="joinmodal-content">
+      <div class="joincontainer">
+          <span onclick="closejoin();" class="close"><img src="img/close.svg" width="15"alt=""></span>
+         
+        <button id="joinfacebook" onclick="" style="width:500px;"><img src="img/facebook.svg" width="15" alt=""> 페이스북 계정으로 로그인</button>
+        <br>
+          
+        <button id="joingoogle" onclick="" style="width:500px;"><img src="img/google.svg" width="15"alt=""> 구글 계정으로 로그인</button><br>
+        
+        <div class="joinline">
+             <div class="joinleft"></div>
+             <span id="joinor">또는</span>
+             <div class="joinright"></div><br>
+         </div>
+        
+        <button id="joinemail" onclick="" style="width:500px;"> 
+       이메일로 회원가입</button><br>
+      <hr>
+          <div id="joinrelogin">
+              <span id="jointext">이미 에어비앤비의 계정이 있나요?</span>
+              <a href="">로그인</a>
+          </div>
+      </div>
+  </form>
+
+</div>
+<!-- 로그인 폼 끝 -->
+
+
+
+  <!--로그인 팝업창 시작-->
+  <div id="login" class="modal">
+    <form class="modal-content" id="modalform">
+      <button id="close-button" onclick="closelogin();">
+        <img src="img/close.svg" width="16px" alt=""> </button>
+
+      <button id="facebook" type="button" style="width:500px;margin-bottom: 0px;"><img src="img/facebook.svg" width="15" alt=""> 페이스북
+        계정으로 로그인</button>
+
+      <button id="google"type="button" style="width:500px;"><img src="img/google.svg" width="15" alt=""> 구글 계정으로 로그인</button><br>
+      <div class="container">
+
+        <div class="line">
+          <div class="left"></div>
+          <span id="or">또는</span>
+          <div class="right"></div><br>
+        </div>
+        <form>
+          <div>
+            <div id="emailinput">
+
+              <input type="text" placeholder="이메일주소" style="width: 400px;">
+              <img src="img/email1.svg" alt="" width="15">
+            </div>
+            <div id="passinput">
+              <input type="password" placeholder="비밀번호" style="width: 400px;">
+              <img src="img/pass.svg" alt="" width="15">
+            </div>
+        </form>
+
+
+
+        <div id="checkboxdiv">
+          <input type="checkbox" checked>비밀번호 저장
+
+          <a href="">비밀번호 보기</a>
+        </div>
+        <div id="hint">
+          <a href="">전화번호로 로그인</a>
+          <a href="">ㆍ비밀번호가 생각나지 않으세요?
+          </a>
+        </div>
+      </div>
+      <button id="email" style="width:500px;">로그인
+      </button>
+      <br>
+      <hr style="width: 450px;">
+      <div id="relogin">
+        <span id="text">에어비앤비 계정이 없으세요?</span>
+        <a href="#" id="join_a">회원가입</a>
+      </div>
+    </form>
+  </div>
+</div>
+  <!--로그인 팝업창 끝-->
+
+
+  <!--자바 스크립트 시작-->
+
+  <!--css carousel 링크 및 자바스크립트-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script type="module">
+    import { tns } from './src/tiny-slider.js';
+
+    var slider = tns({
+      container: '.slider',
+      items: 3,
+      slideBy: 'page',
+      autoplay: true
+    });
+  </script>
+  <script>
+    var slider = tns({
+      container: '.slider',
+      items: 1, /*item은 총 돌아가는 사진 갯수*/
+      responsive: { /*화면의 크기에 따라 다르게 움직이게함(반응형)*/
+        640: {
+          edgePadding: 20,
+          gutter: 20,
+          items: 2
+        },
+        700: {
+          gutter: 30
+        },
+        900: {
+          items: 4
+        }
+      },
+      nav: false,
+      controlsContainer: ".my-controls"
+    });
+  </script>
+  <!--css carousel 링크 및 자바스크립트-->
+  <!--로그인 팝업과 회원가입 팝업 자바스크립트-->
+  <script>
+    var login = document.getElementById('login');
+    var modal = document.getElementById('modalform');
+    var btn = document.getElementById('email');
+    var join_a = document.getElementById('join_a');
+    var join = document.getElementById('join');
+    /*로그인을 누르면 이메일과 비밀번호창도 나타남*/
+    function openlogin() {
+      login.style.display = 'block';
+      join.style.display='none';
+      btn.innerHTML = "로그인";
+    }
+
+    /*닫기 버튼 누르면 창 닫힘*/
+    function closelogin() {
+      login.style.display = "none";
+    }
+    /*로그인창 밖의 화면 클릭시 창 닫힘*/
+    window.onclick = function (event) {
+      if (event.target == login||event.target==join) {
+        login.style.display = 'none';
+        join.style.display='none';
+      }
+    }
+
+    
+  function openjoin(){
+    join.style.display='block';
+  }
+  function closejoin(){
+    join.style.display='none';
+  }
+  // 로그인 화면 바깥의 영역을 클릭할 경우 로그인 창 닫기
+ 
+  </script>
+  <!--로그인 팝업과 회원가입 팝업 자바스크립트-->
+
+  <!--자바 스크립트 끝-->
+</body>
+
+</html>
